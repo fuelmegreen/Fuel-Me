@@ -5,17 +5,17 @@ defaults: &defaults
   pool: 5
   timeout: 5000
   username: root
-  password:
+  password: p@ssw0rd
   socket: /tmp/mysql.sock
 
 development:
   <<: *defaults
-  database: skywyre_development
+  database: fuelme_development
 
 test:
   <<: *defaults
-  database: skywyre_test
+  database: fuelme_test
 
 production:
   <<: *defaults
-  database: skywyre
+  database: fuelme

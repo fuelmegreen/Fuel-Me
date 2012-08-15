@@ -1,4 +1,34 @@
 FuelMe::Application.routes.draw do
+  get "home/index"
+
+  get "home/about"
+
+  get "home/privacy"
+
+  get "home/contact"
+
+  get "home/terms"
+
+  get "home/how_it_works"
+
+  get "home/potential_investors"
+
+  # Public pages
+  match 'about'               => 'home#about',   as: :about
+  match 'contact'             => 'home#contact', as: :contact
+  match 'privacy'             => 'home#privacy', as: :privacy
+  match 'terms'               => 'home#terms',   as: :terms
+  match 'how_it_works'        => 'home#how_it_works', as: :how_it_works
+  match 'potential_investors' => 'home#potential_investors', as: :potential_investors
+
+  resources :homes
+
+  resources :how_tos
+
+  resources :potential_investors
+
+  resources :abouts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +78,7 @@ FuelMe::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
