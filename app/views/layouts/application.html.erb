@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FuelMe</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<title>Depot</title>
+<%= stylesheet_link_tag    "application" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
+<!-- START_HIGHLIGHT -->
+<body class='<%= controller.controller_name %>'>
 
 </body>
 </html>
