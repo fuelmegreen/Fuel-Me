@@ -1,0 +1,12 @@
+aws_credentials:
+  provider:              AWS
+  aws_access_key_id:     AKIAJFQ2OYW3XC5FVB6Q
+  aws_secret_access_key: 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
+  region:                us-east-1
+
+cache_options:
+  Cache-Control: max-age=315576000
+
+root_dir:  tmp
+s3_bucket: skywyre
+cache_dir: uploads

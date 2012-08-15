@@ -1,0 +1,17 @@
+# Account Providers
+facebook:
+  key:    '358971764170041'
+  secret: 'e4d6bce94a4ca82ad393f43a174d4e11'
+  options:
+    :display: 'popup'
+    :scope: 'email, offline_access, user_about_me, user_photos, user_videos, friends_about_me, publish_stream'
+    :client_options:
+      :ssl:
+        :ca_path: "/etc/ssl/certs"
+twitter:
+  key:    '1UrRCs1ylc5ZyDTBCPQBGg'
+  secret: '5W7TE8MmupNn25Vy9wiR2xy0f9FenOw6EJ8CfxG0s'
+linkedin:
+  key:    '2vvbs5tbte0u'
+  secret: '5RRFAhqHakPYqC3E'
+

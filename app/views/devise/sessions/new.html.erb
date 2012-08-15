@@ -1,0 +1,77 @@
+        <header>
+          <i class="icon-lock"></i>
+          <span>SIGN IN</span>
+        </header>
+
+        <div class="content">
+          <% if msg = flash_notice %>
+            <div class="alert alert-error alert-block">
+              <div class="alert-icon error-icon"></div>
+              <div class="close" data-dismiss="alert">&times;</div>
+              <%= msg.first.to_s.strip %>
+            </div>
+          <% end %>
+
+
+          <%= form_for @user, as: :user, url: session_path(:user) do |f| %>
+          
+            
+            <div class="login-fields">
+                              
+              <div class="field">
+                <label for="username">Login:</label>
+                <input type="text" id="username" name="username" value="" placeholder="Username or E-mail" class="login username-field input-xlarge">
+              </div> <!-- /.field -->
+              
+              <div class="field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field input-xlarge">
+              </div> <!-- /.field -->
+              
+            </div><!-- /.login-fields -->
+            
+            <div class="login-actions">
+              
+              <br />
+              <span class="login-checkbox">                
+                <label class="choice">
+                  <input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4">
+                  &nbsp;Keep me signed in
+                </label>
+              </span>
+              
+              <br />
+              <button class="button btn btn-large btn-primary btn-madmin">Sign In</button>
+              <a id="forgot-password" data-toggle="modal" href="#forgot-modal">Forgot Password?</a><br/>
+              <span class="register">Don't have an account? <a href="/register">Sign Up</a></span>
+            </div><!-- /.login-actions -->
+          
+          <% end %>
+        </div><!-- /.content -->
+
+<div class="modal hide" id="forgot-modal">
+  <div class="modal-header">
+    <h3>Forgot Password</h3>
+  </div>
+  <%= form_tag '/forgot_password', id: 'forgot-form' do  %>
+  <div class="modal-body">
+    <p>Enter your username or e-mail, and a new password will be sent to you:</p><br>
+    <%= text(:login, class: 'input-xlarge', placeholder: 'Username or E-mail').html_safe %>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+    <a href="#" class="btn btn-primary">Request Password</a>
+  </div>
+  <% end %>
+</div>
+
+<style>
+  #forgot-password {
+    margin-left: 6px;  
+  }
+  span.register {
+    float:left;
+    margin-top: 15px;  
+  }
+
+</style>

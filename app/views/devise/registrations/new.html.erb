@@ -1,0 +1,63 @@
+        <header>
+          <i class="icon-sitemap"></i>
+          <span>SIGN UP</span>
+        </header>
+
+        <div class="content">
+          <% if msg = flash_notice %>
+            <div class="alert alert-error alert-block">
+              <div class="alert-icon error-icon"></div>
+              <div class="close" data-dismiss="alert">&times;</div>
+              <%= msg.first.to_s.strip %>
+            </div>
+          <% end %>
+
+ 
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), id: 'register') do |f| %>
+
+            <div class="login-fields">
+
+               <div class="field">
+                <label for="username">Site:</label>
+                <input type="text" id="site" name="site" value="" placeholder="Choose a unique site name" class="login email-field input-xlarge">
+              </div> <!-- /.field -->
+
+               <div class="field">
+                <label for="username">Name:</label>
+                <input type="text" id="name" name="name" value="" placeholder="Enter your full Name" class="login email-field input-xlarge">
+              </div> <!-- /.field -->
+ 
+              <div class="field">
+                <label for="username">E-mail:</label>
+                <input type="text" id="email" name="email" value="" placeholder="Enter your E-mail" class="login email-field input-xlarge">
+              </div> <!-- /.field -->
+              
+              <div class="field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="" placeholder="'Choose a password (6-12 characters)" class="login password-field input-xlarge">
+              </div> <!-- /.field -->
+
+               <div class="field">
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="password" name="password" value="" placeholder="Re-enter your password" class="login password-field input-xlarge">
+              </div> <!-- /.field -->
+              
+            </div><!-- /.login-fields -->
+            
+            <div class="login-actions">
+              <br />
+              <button class="button btn btn-large btn-primary btn-madmin">Create Account</button><br/>
+              <span class="login">Have an account? <a href="/login">Sign In</a></span>
+              
+            </div><!-- /.login-actions -->
+          
+          <% end %>
+        </div><!-- /.content -->
+
+  <style>
+  span.login {
+    float:left;
+    margin-top: 15px;  
+  }
+</style>
+

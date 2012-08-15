@@ -1,0 +1,108 @@
+#=== Log4r Application Logger Config
+log4r_config:
+
+  # Define Loggers ...
+  loggers:
+
+    # Defualt Logger
+    - name      : default
+      level     : DEBUG
+      additive  : 'false'
+      trace     : 'true'
+      outputters:
+        - stderr
+        - stdout
+        - datefilelog
+        - logfile
+#       - udp
+#       - email
+
+#    # Batch Logger
+#    - name      : batch
+#      level     : INFO
+#      additive  : 'false'
+#      trace     : 'true'
+#      outputters:
+#        - stderr
+#        - stdout
+#        - datefilelog
+#        - logfile
+
+  # Define OutPutters ...
+  outputters:
+
+    # DateFile
+    - type        : DateFileOutputter
+      name        : datefilelog
+      level       : DEBUG
+      date_pattern: '%Y%m%d'
+      trunc       : 'false'
+      dirname     : "#{RAILS_ROOT}/log"
+      formatter   :
+        date_pattern: '%Y-%m-%d %H:%M:%S'
+        pattern     : "[%l] %d :: %m"
+        type        : PatternFormatter
+
+    # Standard Logfile
+    - type        : FileOutputter
+      name        : logfile
+      level       : DEBUG
+      trunc       : 'false'
+      filename    : "#{RAILS_ROOT}/log/#{RAILS_ENV}.log"
+      formatter   :
+        date_pattern: '%Y-%m-%d %H:%M:%S'
+        pattern     : "[%l] %d :: %m"
+        type        : PatternFormatter
+
+#    # UDP Distributted Logger
+#    - type     : UDPOutputter
+#      name     : udp
+#      level    : ERROR
+#      hostname : 'loghost'
+#      port     : '2552'
+#      formatter:
+#        date_pattern: '%Y-%m-%d %H:%M:%S'
+#        # NOTE: Added 'M' and 't' here, they're said to be slow - RConda
+#        pattern     : "[%l] %d :: %M :: %t"
+#        type        : PatternFormatter
+#        #type        : Log4jXmlFormatter
+
+#    # Email
+#    - type        : EmailOutputter
+#      name        : email
+#      level       : ERROR
+#      server      : 'smtp.sendgrid.net'
+#      port        : '25'
+#      domain      : 'placebook.com'
+#      authtype    : 'plain'
+#      acct        : 'smtp-user@placebook.com'
+#      passwd      : 'UyL5hvDOvDj4'
+#      subject     : 'Application Error'
+#      from        : 'Error Notifier <no-reply@triptrace.com>'
+#      to          : 'rahmal.conda@triptrace.com,kevin.brackney@triptrace.com'
+#      immediate_at: "FATAL, ERROR"
+#      formatfirst : 'true'
+#      formatter   :
+#        date_pattern: '%Y-%m-%d %H:%M:%S'
+#        # NOTE: Added 'M' and 't' here, they're said to be slow - RConda
+#        pattern     : "[%l] %d :: %M :: %t"
+#        type        : PatternFormatter
+
+    # Standard Error
+    - type:    StderrOutputter
+      name:    stderr
+      level:   ERROR
+      only_at: [ERROR, FATAL]
+      formatter:
+        type: PatternFormatter
+        date_pattern: '%Y-%m-%d %H:%M:%S'
+        pattern     : "[%l] %d :: %M :: %t"
+
+    # Standard Out
+    - type:  StdoutOutputter
+      name:  stdout
+      level: DEBUG
+      formatter:
+        type: PatternFormatter
+        date_pattern: '%Y-%m-%d %H:%M:%S'
+        pattern:      '[%l] %d :: %m'

@@ -1,0 +1,11 @@
+<% msg, type = flash_notice %>
+<% if msg -%>
+  <div class="alert alert-<%= type %> alert-block">
+    <div class="alert-icon <%= type %>-icon"></div>
+    <div class="close" data-dismiss="alert"><img src="/assets/close-icon.png" width="24" height="24"></div>
+    <%= msg %>
+  </div>
+<% end -%>
+<style>
+</style>
+

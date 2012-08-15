@@ -1,0 +1,21 @@
+development: &development
+  :address: 'smtp.gmail.com'
+  :domain: 'rahmalconda.com'
+  :port: 587
+  :authentication: :plain
+  :tls: true
+  :enable_starttls_auto: true
+  :user_name: 'rahmal@rahmalconda.com'
+  :password: 'haji2001'
+
+test:
+  <<: *development
+
+demo:
+  <<: *development
+
+staging:
+  <<: *development
+
+production:
+  <<: *development

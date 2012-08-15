@@ -1,0 +1,47 @@
+<% content_for :header do %>
+<% end %>
+
+  <div class="modal-header">
+    <h3>Sign Up</h3>
+  </div>
+  <%= form_for(current_user, as: :user, url: '/users/complete', method: :post, id: 'register') do |f| %>
+    <div class="modal-body">
+
+      <div class="reg-col uploader" style="float: left; margin-right: 20px;">
+        <fieldset>
+          <%= avatar(img: {scale: :normal}) %>
+        </fieldset>
+      </div>
+
+      <div class="reg-col" style="float: left;">
+        <fieldset>
+          <%= text(:name, form: f, value: current_user.name, 
+                   popover: {content: 'Enter your first and last name.'},   placeholder: 'Full Name', tabindex: 1).html_safe %>
+          <%= text(:username, form: f, value: current_user.username,
+                   popover: {content: 'Choose a unique handle.'},           placeholder: 'Username',  tabindex: 2).html_safe %>
+          <%= text(:email,    form: f, value: current_user.email,
+                   popover: {content: 'Enter your e-mail address.'},        placeholder: 'E-mail',    tabindex: 3).html_safe %>
+          <%= text(:bio,      form: f, value: current_user.bio,
+                   popover: {content: 'Enter a few words about yourself.'}, placeholder: 'About You', tabindex: 4).html_safe %>
+
+          <%= password(:password, form: f,
+                       popover: {content: 'Six to twelve characters. Choose something tricky.'}, tabindex: 5).html_safe %>
+          <%= password(:password_confirmation, form: f,
+                       popover: {content: 'Re-enter your password for confirmation.'}, placeholder: 'Confirm Password', tabindex: 6).html_safe %>
+
+          <%= f.submit "Create Account", id: 'signup-button', class: 'btn btn-primary' %>
+        </fieldset>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <%= connect_buttons %>
+    </div>
+  <% end %>
+
+<script>
+  <% current_user.valid? %>
+  var errors = <%= current_user.errors.to_json.html_safe %>;
+</script>
+
+
+
