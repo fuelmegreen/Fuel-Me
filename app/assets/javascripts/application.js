@@ -16,8 +16,6 @@
 //
 //= require twitter/bootstrap
 //= require string
-//= require less
-//= require madmin
 //= require_self
 
 $(function(){
