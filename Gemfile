@@ -26,7 +26,7 @@ group :utils do
   gem 'meta_search'         # OO Searching/Search Forms
   gem 'tld'                 # Top Level Domains
   gem 'will_paginate'       # Pagination utility
-  gem 'addressable'
+  gem 'iso_country_codes'   # Country Code lookup
 end
 
 group :security do

@@ -4,18 +4,7 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery
 
-  before_filter :notifications
-  before_filter :messages
-  
   protected
-
-  def notifications
-    @notifications = current_user ? current_user.notifications : []
-  end
-
-  def messages
-    @messages = current_user ? current_user.messages : []
-  end
 
   def notify *args
     options = args.extract_options!
