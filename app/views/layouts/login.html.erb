@@ -13,23 +13,11 @@
   <![endif]-->
 </head>
 <body class="<%= body_class %>">
-  <%= render partial: 'shared/top_bar', locals: {logged_in: false} %>
-
-<div class="container-fluid" id="container">
-  <div class="row-fluid">
-    <div class="span4"></div>
-    <div class="span4">
-      <br /><br /><br />
-      <div class="panel" id="panel-login">
-        <%= yield %>    
-
-      </div><!-- /.panel -->
-
-    </div><!-- /.span4 -->
-
-  </div><!-- /.row-fluid -->
-
-</div>
-
+  <%= render partial: 'layouts/navbar', locals: {logged_in: false} %>
+  <div class="container main">
+    <%= yield %>
+    <hr>
+  </div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>

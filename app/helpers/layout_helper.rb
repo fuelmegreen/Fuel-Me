@@ -1,11 +1,15 @@
 module LayoutHelper
 
-  def navbar
-    RConfig[:navbar].map do |nav|
-      url, label, page = nav
-      active = page?(*page) ? 'active' : '' 
-      li(link_to(label, url), class: active)
-    end.join("\n").html_safe
+  def render_navbar
+    if @navbar.blank?
+      @navbar = RConfig[:navbar].map do |nav|
+        url, label, page = nav
+        active = page?(*page) ? 'active' : '' 
+        @page_header = label.titleize if page?(*page)
+        li(link_to(label, url), class: active)
+      end.join("\n").html_safe
+    end
+    @navbar
   end
 
   def web

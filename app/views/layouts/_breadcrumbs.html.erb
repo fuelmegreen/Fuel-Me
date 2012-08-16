@@ -1,6 +1,6 @@
-<% if page?(:home, :index) %>
-  <ul class="breadcrumb">
+<ul class="breadcrumb">
+  <% unless page?(:home, :index) %>
     <li><a href="/">Home</a> <span class="divider"><i class="icon-caret-right"></i></span></li>
-    <li class="active">About Us</li>
-  </ul>
-<% end %>
+    <li class="active"><%= @page_header %></li>
+  <% end %>
+</ul>

@@ -11,7 +11,7 @@ web:
   author:      "Rahmal Conda"
   robots:      "noodp,noydir"
   viewport:    "initial-scale=1.0, user-scalable=no"
-  copyright:   "&copy; 2012 | FuelMe, Inc. | All Rights Reserved"
+  copyright:   "&copy; 2012 Fuel Choice"
 
 navbar:
   - ['/how_it_works', 'HOW IT WORKS',       [home, how_it_works] ]
@@ -20,6 +20,7 @@ navbar:
   - ['/calculator',   'SAVINGS CALCULATOR', [home, calculator]   ]
   - ['/about',        'ABOUT US',           [home, about]        ]
   - ['/contact',      'CONTACT US',         [home, contact]      ]
+  - ['/help',         'HELP',               [home, help]         ]
  
 
 analytics:
