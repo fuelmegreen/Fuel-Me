@@ -1,0 +1,13 @@
+
+# Default E-mails
+emails:
+  support:  'FuelMe <support@fuelme.com>'
+  no_reply: 'FuelMe <no-reply@fuelme.com>'
+
+# Default Response Info
+response:
+  personal_respondant: 
+    name: 'Mary Tester'
+    title: 'CEO'
+  subject: 'FuelMe: Thank you for your message!'
+  

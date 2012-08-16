@@ -12,3 +12,52 @@
  *= require tablesorter
  *= require pageslide
  */
+
+.navbar{
+  background: url(/assets/layout/navbar.png) #000 top left;
+}
+.navbar, 
+.navbar-inner,
+.navbar .container,
+.navbar .container .nav-collapse,
+.nav li,.nav li a {
+  height: 89px;
+}
+
+.nav li a,
+.nav li a:hover,
+.nav li a.active {
+  text-transform:capitalize;
+  padding-top: 35px !important;
+  font-size: 0.8em;
+}
+
+.navbar .brand {
+  background-color: #fff;
+  height: 60px;
+  border-radius: 0 0 7px 7px; 
+  -moz-border-radius: 0 0 7px 7px;
+  -webkit-border-radius: 0 0 7px 7px;
+  box-shadow: 0 0 3px #333;
+  -moz-box-shadow: 0 0 3px #333;
+  -webkit-box-shadow: 0 0 3px #333;
+}
+
+.breadcrumb {
+  margin: 150px 0 20px 0;
+  padding-left: 0;
+  background: transparent;
+  border: none;
+}
+
+.breadcrumb li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.breadcrumb .divider {
+  color: #aaa;
+  padding: 0 2px
+}
+
+

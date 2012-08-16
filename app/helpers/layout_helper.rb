@@ -1,14 +1,13 @@
 module LayoutHelper
 
-  def top_nav
-    [
-      ['/',        'Home',                 [:home, :index]   ],
-      ['/about',   'About',                [:home, :about]   ],
-      ['/resume',  'R&eacute;sum&eacute;', [:home, :resume]  ],
-      ['/blog',    'Blog',                 [:blog, :index]   ],
-      ['/contact', 'Contact',              [:home, :contact] ],
-    ]
+  def navbar
+    RConfig[:navbar].map do |nav|
+      url, label, page = nav
+      active = page?(*page) ? 'active' : '' 
+      li(link_to(label, url), class: active)
+    end.join("\n").html_safe
   end
+
   def web
     RConfig[:web]
   end
@@ -85,4 +84,13 @@ module LayoutHelper
     content_tag :div, html, class: :clearfix
   end
   alias_method :cf, :clear_fix
+
+  def div content, options={}
+    content_tag :div, content, options
+  end
+
+  def li content, options={}
+    content_tag :li, content, options
+  end
+
 end
