@@ -126,18 +126,25 @@ span.section-image {
   display: block;
 }
 
-p.section-desc {
-  font-size: 11px;
-  font-family: Arial;
-  font-style: italic;
-  padding: 15px 5px 10px 5px;
-  border-bottom: 1px solid #aaa;
-  &.active {
-    border-bottom: 2px solid green;
-    background: url(/assets/about/green-triangle.png) #DDE8DE bottom center no-repeat;
-    /*B4CFB4*/
+.span3.about {
+
+  p.section-desc {
+    font-size: 11px;
+    font-family: Arial;
+    font-style: italic;
+    padding: 15px 5px 10px 5px;
+    border-bottom: 1px solid #aaa;
+  }
+
+  &:hover {
+    .section-desc {
+      border-bottom: 2px solid green !important;
+      background: url(/assets/about/green-triangle.png) #DDE8DE bottom center no-repeat !important;
+    }
   }
 }
+
+
 
 .span3.span3-5 {
   width: 225px;
