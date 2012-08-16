@@ -59,3 +59,5 @@ module FuelMe
 end
 
 CONFIG_ROOT = File.join(Rails.root, 'config') unless defined? CONFIG_ROOT
+
+require 'addressable/uri'

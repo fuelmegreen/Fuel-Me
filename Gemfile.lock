@@ -344,6 +344,7 @@ PLATFORMS
 DEPENDENCIES
   ZenTest
   activeadmin
+  addressable
   autotest
   autotest-growl
   autotest-rails
