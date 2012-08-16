@@ -70,10 +70,15 @@ module LayoutHelper
     tags.join("\n").html_safe
   end
 
-  def favicon
-    ['icon', 'shortcut icon'].map do |rel| 
-      tag :link, rel: rel, href: 'favicon.ico', type: 'image/x-icon' 
-    end.join("\n").html_safe
+  def favicon(type=:ico)
+    case type
+    when :ico
+      ['icon', 'shortcut icon'].map do |rel| 
+        tag(:link, rel: rel, href: 'favicon.ico', type: 'image/x-icon')
+      end.join("\n").html_safe
+    else
+      tag(:link, rel: 'icon', href: '/assets/fuelme-icon.png', type: 'image/x-icon')
+    end
   end
 
   def copyright
