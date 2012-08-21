@@ -13,14 +13,3 @@
   <a href="#" alt="arrow" title="Play Video"></a>
 </div>
 
-<script>
-  var video = '<%= video.html_safe %>';
-  var play = function(e){
-    e.preventDefault();
-    $('.play-button').hide();
-    $('.video').css('opacity', '1.0').html(video);
-  };
-  $(function(){
-     $('.play-button a').click(play);
-  });
-</script>

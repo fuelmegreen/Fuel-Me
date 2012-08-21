@@ -2,12 +2,12 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= meta_tags                %>
-  <%= favicon :png             %>
+  <%= meta_tags                       %>
+  <%= favicon :png                    %>
   <%= stylesheets :application, :home %>
-  <%= javascripts :application %>
-  <%= google_analytics         %>
-  <%= yield(:head)             %>
+  <%= javascripts :application, :home %>
+  <%= google_analytics                %>
+  <%= yield(:head)                    %>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
