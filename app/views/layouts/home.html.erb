@@ -4,19 +4,23 @@
   <title><%= title %></title>
   <%= meta_tags                %>
   <%= favicon :png             %>
-  <%= stylesheets :application %>
+  <%= stylesheets :application, :home %>
   <%= javascripts :application %>
   <%= google_analytics         %>
   <%= yield(:head)             %>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
+  <style>
+  </style>
 </head>
-<body class="<%= body_class %>">
+<body class="<%= body_class %> index">
   <%= render partial: 'layouts/navbar', locals: {logged_in: false} %>
-  <div class="container main">
+  <div class="container home">
     <%= yield %>
   </div>
   <%= render 'layouts/footer' %>
 </body>
 </html>
+
+

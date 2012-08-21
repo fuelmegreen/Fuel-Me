@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
+  layout 'application'
 
   def index
+    render layout: 'home'
   end
 
   def how_it_works

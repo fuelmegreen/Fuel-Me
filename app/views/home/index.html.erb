@@ -1,11 +1,26 @@
-<%# Home#index %>
-<h1>FuelMeGreen.com</h1>
+<%# home#index %>
+<% src_1 = "http://www.youtube.com/embed/1MnLxSBEDQA?rel=0&autoplay=1" %>
+<% src_2 = "http://player.vimeo.com/video/24410070?title=0&byline=0&portrait=0&autoplay=1" %>
+<% video = %Q{<iframe class="video-embed" width="795" height="460" frameborder="0" src="#{src_1}"></iframe>} %>
 
-<p>
-<%= link_to 'About Us', about_path %>  |
-<%= link_to 'Contact Us', contact_path %>  |
-<%= link_to 'How It Works', how_it_works_path %>  |
-<%= link_to 'Potential Investors', investors_path %>  |
-<%= link_to 'Privacy', privacy_path %>  |  
-<%= link_to 'Terms', terms_path %>
-</p>
+<div class="menu">
+</div>
+
+<div class="video">
+</div>
+
+<div class="play-button">
+  <a href="#" alt="arrow" title="Play Video"></a>
+</div>
+
+<script>
+  var video = '<%= video.html_safe %>';
+  var play = function(e){
+    e.preventDefault();
+    $('.play-button').hide();
+    $('.video').css('opacity', '1.0').html(video);
+  };
+  $(function(){
+     $('.play-button a').click(play);
+  });
+</script>

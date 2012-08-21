@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/" class="brand"><img src="/assets/fuelme-logo.png"></a>
+          <%= link_to(image_tag('fuelme-logo.png'), '/', class: :brand) unless page?(:home, :index) %>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <%= render_navbar %>
@@ -16,3 +16,4 @@
         </div>
   </div>
 </div>
+<%= link_to(image_tag('fuelme-logo.png'), '/', class: :brand) if page?(:home, :index) %>

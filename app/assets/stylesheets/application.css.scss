@@ -33,12 +33,16 @@
   .brand {
     background-color: #fff;
     height: 60px;
-    border-radius: 0 0 7px 7px; 
+    -ms-border-radius: 0 0 7px 7px;
     -moz-border-radius: 0 0 7px 7px;
     -webkit-border-radius: 0 0 7px 7px;
-    box-shadow: 0 0 3px #333;
-    -moz-box-shadow: 0 0 3px #333;
-    -webkit-box-shadow: 0 0 3px #333;
+    -o-border-radius: 0 0 7px 7px;
+    border-radius: 0 0 7px 7px;
+    -ms-box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.75);
+    -moz-box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.75);
+    -webkit-box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.75);
+    -o-box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.75);
+    box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.75);
   }
 }
 
