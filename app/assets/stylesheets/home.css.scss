@@ -13,7 +13,10 @@ body.home.index {
     margin-left: 200px;
   }
   .brand {
-    margin: 87px 0 0 205px;
+    position: fixed;
+    top: 87px;
+    left: 205px;
+    //margin: 87px 0 0 205px;
     width: 215px;
     height: 65px;
     display: block;
@@ -34,8 +37,6 @@ body.home.index {
 
   }
 }
-
-
 
 .home.container {
   margin-top: 150px;
@@ -71,6 +72,68 @@ body.home.index {
     opacity: 0.3;
     filter: alpha(opacity=30); // For IE8 and earlier
 
+    p {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-family: "Helvetica Neue", "Helvetica Neue Light", sans-serif;
+      font-weight: 400;
+      font-size: 1.2em;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: 240px;
+    left: 75px;
+    width: 321px;
+    height: 352px;
+    background: url(/assets/home/menu-bg.png) transparent no-repeat top left;
+
+    .menu-header {
+      display: block;
+      float: left;
+      margin: 23px 0 0 55px;
+      font-family: "Helvetica Neue", "Helvetica Neue Light", sans-serif;
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #fff
+    }
+
+    form input[type=text] {
+      border:none;
+      &:hover, &:focus {
+        border:none;
+      }
+    }
+    form input[type=image] {
+    }
+    .email {
+      float: left;
+      margin: 39px 0 0 46px;
+      padding-left: 6px;
+      width: 212px;
+      height: 24px;
+      color: #333;
+      font-style: italic;
+      font-family: "Helvetica Neue", "Helvetica Neue Light", sans-serif;
+    }
+    .join-btn {
+      float: left;
+      margin: 20px 0 0 40px;
+      width: 75px;
+      height: 35px;
+      border: none;
+      font-size: 14px;
+      font-family: Arial;
+      color: #fff;
+      text-shadow: 0 1px 0 #000;
+      background: url(/assets/home/submit-button.png) transparent no-repeat top left;
+    }
+    .facebook-btn {
+      float: left;
+      margin: 23px 0 0 10px;
+    }
   }
 }
 
