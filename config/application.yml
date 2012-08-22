@@ -22,6 +22,9 @@ navbar:
   - ['/contact',      'CONTACT US',         [home, contact]      ]
   - ['/help',         'HELP',               [home, help]         ]
  
+favicon:
+  ico: 'favicon.ico'
+  png: '/assets/fuelme-icon.png'
 
 analytics:
   google:

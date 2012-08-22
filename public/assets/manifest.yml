@@ -14,8 +14,10 @@ facebook-16.png: facebook-16-1abda2d42621a274a1a38729d330258d.png
 facebook-btn.png: facebook-btn-c991fd0f4e8c0ffeb641bb159e685278.png
 fuelme-icon.png: fuelme-icon-fde03093b46c91a1a469d916fc61a892.png
 fuelme-logo.png: fuelme-logo-afa4537c02d3bef5127aa5b2d7437dfd.png
+home/menu-bg.png: home/menu-bg-dc45eb467babf5c3119935137611ff49.png
 home/play-button-arrow.png: home/play-button-arrow-9e91c33b3da9f0bb597060dbd76da0a3.png
 home/play-button-bg.png: home/play-button-bg-99c58501db8c4b80d6bdd921c02aaaf8.png
+home/submit-button.png: home/submit-button-c7c1b0c5fb236922e7f1a1f2f07e261f.png
 image-placeholder.jpg: image-placeholder-887090404da82196b5a974c86399c0ea.jpg
 layout/divider.png: layout/divider-131779b89798e721c04b7b17adcabe40.png
 layout/footer copy.png: layout/footer copy-355a102490b24c85a6c474624d108f0a.png
@@ -34,7 +36,7 @@ twitter-btn.png: twitter-btn-419f26bf7a72f1ea749817517c01851c.png
 application.js: application-774bd7ad1029f4d89bf6013f056b7cb6.js
 home.js: home-b9178f332ec5f9a6ed8d1c3c82a7aa77.js
 application.css: application-15f4a2f0ac6194b1eafe5c5ca08cd820.css
-home.css: home-0a56716757d6370ffb7c8e370c46156b.css
+home.css: home-15d4b6db4a34972aec787839b54ea7ed.css
 tablesorter/asc.gif: tablesorter/asc-8154408a346ea4664d6883db5fe36cc2.gif
 tablesorter/bg.gif: tablesorter/bg-3107e5e32a57b62120071c252fcf3b11.gif
 tablesorter/desc.gif: tablesorter/desc-e59eaf8479de8ff7e72aa19546c3bac6.gif
