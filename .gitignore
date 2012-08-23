@@ -1,6 +1,7 @@
 *.iws
 *.ipr
 *.imla
+*.iml
 *.tmproj
 *.log
 *.swp
@@ -15,6 +16,8 @@
 .svn
 log
 tmp
+.idea/*
+log/*
 nohup.out
 notes.txt
 Thumbs.db

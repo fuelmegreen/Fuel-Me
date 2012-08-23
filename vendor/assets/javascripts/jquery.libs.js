@@ -1,11 +1,12 @@
+//= require jquery.form
+//  require jquery.form.wizard
+//= require jquery.masonry
+//= require jquery.masked.input
+//= require_tree ./jquery.pageslide
+//= require_tree ./jquery.tablesorter
+//= require jquery.tagsinput
+//= require jquery.tools
 //= require jquery.ui
 //= require jquery.validate
-//= require jquery.form
-//= require jquery.form.wizard
-//= require jquery.masked.input
-//= require jquery.tools
-//= require jquery.tagsinput
-//= require jquery.masonry
-//= require address.validator
-//= require_tree ./jquery.tablesorter
-//= require_tree ./jquery.pageslide
+//  require address.validator
+

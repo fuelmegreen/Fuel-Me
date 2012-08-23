@@ -19,9 +19,10 @@
 #= require_self
 
 $ ->
+  $('.dropdown-toggle').dropdown()
   $('a[rel=popover]').popover()
   $('a[rel=tooltip]').tooltip()
   $('.tooltip').tooltip()
-  $('.tablesorter').tablesorter({widgets: ['zebra']})
-  $('a.help-link').pageslide({direction: 'left'})
+#  $('.tablesorter').tablesorter({widgets: ['zebra']})
+#  $('a.help-link').pageslide({direction: 'left'})
 

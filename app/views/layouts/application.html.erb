@@ -3,7 +3,7 @@
 <head>
   <title><%= title %></title>
   <%= meta_tags                %>
-  <%= favicon                  %>
+  <%= favicon :png             %>
   <%= stylesheets :application %>
   <%= javascripts :application %>
   <%= google_analytics         %>
@@ -17,7 +17,6 @@
   <div class="container main">
     <%= render 'layouts/breadcrumbs' %>
     <%= yield %>
-    <hr>
   </div>
   <%= render 'layouts/footer' %>
 </body>

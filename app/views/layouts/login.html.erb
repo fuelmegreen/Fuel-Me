@@ -3,7 +3,7 @@
 <head>
   <title><%= title %></title>
   <%= meta_tags                %>
-  <%= favicon                  %>
+  <%= favicon :png             %>
   <%= stylesheets :application %>
   <%= javascripts :application %>
   <%= google_analytics         %>
@@ -16,7 +16,6 @@
   <%= render partial: 'layouts/navbar', locals: {logged_in: false} %>
   <div class="container main">
     <%= yield %>
-    <hr>
   </div>
   <%= render 'layouts/footer' %>
 </body>

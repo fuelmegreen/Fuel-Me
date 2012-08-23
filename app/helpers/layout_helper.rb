@@ -3,10 +3,23 @@ module LayoutHelper
   def render_navbar
     if @navbar.blank?
       @navbar = RConfig[:navbar].map do |nav|
-        url, label, page = nav
-        active = page?(*page) ? 'active' : '' 
+        li_classes = []
+        url, label, page, subnavs = nav
         @page_header = label.titleize if page?(*page)
-        li(link_to(label, url), class: active)
+        link = link_to(label, url)
+        li_classes << 'active' if page?(*page)
+        if subnavs
+          li_classes << 'dropdown'
+          label = %Q{#{label}&nbsp;<b class="caret"></b>}.html_safe
+          link = link_to(label, '#', id: 'help', class: 'dropdown-toggle', :'data-toggle' => 'dropdown', role: 'button')
+          link << '<ul class="dropdown-menu" role="menu" aria-labelledby="help">'.html_safe
+          subnavs.each do |subnav|
+            sub_link, sub_label = subnav
+            link << %Q{<li><a tabindex="-1" href="#{sub_link}">#{sub_label}</a></li>}.html_safe
+          end
+          link << '</ul>'.html_safe
+        end
+        li(link, class: li_classes.join)
       end.join("\n").html_safe
     end
     @navbar
@@ -70,9 +83,10 @@ module LayoutHelper
     tags.join("\n").html_safe
   end
 
-  def favicon
+  def favicon(type=:ico)
+    href = RConfig[:favicon][type]
     ['icon', 'shortcut icon'].map do |rel| 
-      tag :link, rel: rel, href: 'favicon.ico', type: 'image/x-icon' 
+      tag(:link, rel: rel, href: href, type: 'image/x-icon')
     end.join("\n").html_safe
   end
 

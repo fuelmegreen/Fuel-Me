@@ -40,7 +40,7 @@ class Postman < ActionMailer::Base
   end
 
   def email(user)
-    user.name.present? "#{user.name} <#{user.email}>" : user.email
+    user.name.present? ? "#{user.name} <#{user.email}>" : user.email
   end
 
 end

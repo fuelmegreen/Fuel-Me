@@ -1,6 +1,11 @@
 <ul class="breadcrumb">
   <% unless page?(:home, :index) %>
-    <li><a href="/">Home</a> <span class="divider"><i class="icon-caret-right"></i></span></li>
-    <li class="active"><%= @page_header %></li>
-  <% end %>
+    <li><a href="/">Home</a><span class="divider"><i class="icon-caret-right"></i></span></li>
+    <% if @page_sub_header %>
+      <li class=""><%= link_to @page_header, @page_header_link %><span class="divider"><i class="icon-caret-right"></i></span></li>
+      <li class="active"><%= @page_sub_header %></li>
+    <% else %>
+      <li class="active"><%= @page_header %></li>
+    <% end  %>
+  <% end  %>
 </ul>

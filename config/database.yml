@@ -18,4 +18,4 @@ test:
 
 production:
   <<: *defaults
-  database: fuelme
+  database: fuelme_development

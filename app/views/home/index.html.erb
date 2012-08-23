@@ -1,11 +1,23 @@
-<%# Home#index %>
-<h1>FuelMeGreen.com</h1>
+<%# home#index %>
 
-<p>
-<%= link_to 'About Us', about_path %>  |
-<%= link_to 'Contact Us', contact_path %>  |
-<%= link_to 'How It Works', how_it_works_path %>  |
-<%= link_to 'Potential Investors', investors_path %>  |
-<%= link_to 'Privacy', privacy_path %>  |  
-<%= link_to 'Terms', terms_path %>
-</p>
+<div class="menu">
+  <h2 class="menu-header">Sign Up For Our Waiting List</h2>
+  <%= form_for @user, as: :user, url: session_path(:user) do |f| %>
+    <%= text(:email, class: 'input email', placeholder: 'email_').html_safe %>
+    <button class="join-btn" type="submit">Join</button>
+    <a class="facebook-btn" href="/auth/facebook"><img src="/assets/facebook-btn.png" width="145"></a>
+    <%#= image_submit_tag("/assets/home/submit-button.png", value: 'Join', class: 'join-btn') %>
+  <% end %>
+</div>
+
+<div class="video">
+  <p>
+    The Electric/Hybrid that you have been waiting for is now affordable.<br/>
+    Thanks to a group of pioneering investors.
+  </p>
+</div>
+
+<div class="play-button">
+  <a href="#" alt="arrow" title="Play Video"></a>
+</div>
+

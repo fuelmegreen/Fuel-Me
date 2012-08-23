@@ -28,6 +28,8 @@ group :utils do
   gem 'tld'                 # Top Level Domains
   gem 'will_paginate'       # Pagination utility
   gem 'iso_country_codes'   # Country Code lookup
+  gem 'addressable'         # Ruby URI update
+  gem 'delayed_job_active_record' # Background Jobs
 end
 
 group :security do
