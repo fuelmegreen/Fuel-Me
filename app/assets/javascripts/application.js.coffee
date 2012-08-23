@@ -19,6 +19,7 @@
 #= require_self
 
 $ ->
+  $('.dropdown-toggle').dropdown()
   $('a[rel=popover]').popover()
   $('a[rel=tooltip]').tooltip()
   $('.tooltip').tooltip()

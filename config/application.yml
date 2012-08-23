@@ -17,10 +17,10 @@ navbar:
   - ['/how_it_works', 'HOW IT WORKS',       [home, how_it_works] ]
   - ['/loans',        'PERSONAL LOANS',     [home, loans]        ]
   - ['/investors',    'INVESTING',          [home, investors]    ]
-  - ['/calculator',   'SAVINGS CALCULATOR', [home, calculator]   ]
+  - ['/calculator',   'FUEL SAVINGS CALCULATOR', [home, calculator]   ]
   - ['/about',        'ABOUT US',           [home, about]        ]
   - ['/contact',      'CONTACT US',         [home, contact]      ]
-  - ['/help',         'HELP',               [home, help]         ]
+#  - ['/help',         'HELP',               [home, help], [['/terms', 'TERMS & CONDITIONS'], ['/privacy', 'PRIVACY POLICY']]     ]
  
 favicon:
   ico: 'favicon.ico'

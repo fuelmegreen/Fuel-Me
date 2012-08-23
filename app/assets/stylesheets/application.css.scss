@@ -22,7 +22,9 @@
   background: url(/assets/layout/navbar.png) #000 top left;
 
   .menu-arrow {
-    position: fixed;
+    float: left;
+    margin-left: 135px;
+    margin-right: 30px;
     top: 0;
     left: 135px;
     width: 60px;
