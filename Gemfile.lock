@@ -84,7 +84,7 @@ GEM
       compass
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
-    copycopter_client (2.0.0)
+    copycopter_client (2.0.1)
       i18n (>= 0.5.0)
       json
     cucumber (1.2.1)
@@ -363,7 +363,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-h5bp
   compass-rails
-  copycopter_client (= 2.0.0)
+  copycopter_client (~> 2.0.1)
   cucumber-rails
   database_cleaner
   delayed_job_active_record
