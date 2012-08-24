@@ -62,23 +62,40 @@ body.home.index {
          -o-box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
             box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
 
-    background:     -ms-linear-gradient(top,#fff,#aaa 45%, #aaa 45%, #555);
-    background:    -moz-linear-gradient(top,#fff,#aaa 45%, #aaa 45%, #555);
-    background: -webkit-linear-gradient(top,#fff,#aaa 45%, #aaa 45%, #555);
-    background:      -o-linear-gradient(top,#fff,#aaa 45%, #aaa 45%, #555);
-    background:         linear-gradient(top,#fff,#aaa 45%, #aaa 45%, #555);
+    background:     -ms-linear-gradient(top,#aaa,#aaa 45%, #aaa 45%, #666);
+    background:    -moz-linear-gradient(top,#aaa,#aaa 45%, #aaa 45%, #666);
+    background: -webkit-linear-gradient(top,#aaa,#aaa 45%, #aaa 45%, #666);
+    background:      -o-linear-gradient(top,#aaa,#aaa 45%, #aaa 45%, #666);
+    background:         linear-gradient(top,#aaa,#aaa 45%, #aaa 45%, #666);
 
 
     opacity: 0.3;
     filter: alpha(opacity=30); // For IE8 and earlier
 
-    p {
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      font-family: "Helvetica Neue", "Helvetica Neue Light", sans-serif;
-      font-weight: 400;
-      font-size: 1.2em;
+  }
+
+  .intro {
+    position: fixed;
+    top: 260px;
+    right: 175px;
+    width: 795px;
+    text-align: center;
+    color: #fff;
+    font-family: "Helvetica Neue", "Helvetica Neue Light", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+  .social {
+    position: fixed;
+    top: 715px;
+    right: 175px;
+    width: 795px;
+    .twitter, .facebook {
+      float: left;
+    }
+    .fb-like {
+      float: right;
     }
   }
 

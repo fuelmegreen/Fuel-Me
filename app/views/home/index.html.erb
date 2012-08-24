@@ -1,4 +1,14 @@
 <%# home#index %>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="menu">
   <h2 class="menu-header">Sign Up For Our Waiting List</h2>
@@ -6,15 +16,23 @@
     <%= text(:email, class: 'input email', placeholder: 'email_').html_safe %>
     <button class="join-btn" type="submit">Join</button>
     <a class="facebook-btn" href="/auth/facebook"><img src="/assets/facebook-btn.png" width="145"></a>
-    <%#= image_submit_tag("/assets/home/submit-button.png", value: 'Join', class: 'join-btn') %>
   <% end %>
 </div>
 
-<div class="video">
-  <p>
-    The Electric/Hybrid that you have been waiting for is now affordable.<br/>
-    Thanks to a group of pioneering investors.
-  </p>
+<div class="intro"><%= t('.lead_in.video_intro') %></div>
+<div class="video"></div>
+<div class="social">
+  <div class="twitter">
+    <a href="http://www.twitter.com/<%= RConfig[:social].twitter %>" target="_blank">
+      <img src="/assets/home/twitter.png" width="30">
+    </a>
+  </div>
+  <div class="facebook">
+    <a href="http://www.facebook.com/<%= RConfig[:social].facebook %>" target="_blank">
+      <img src="/assets/home/facebook.png" width="30">
+    </a>
+  </div>
+  <div class="fb-like" data-href="http://www.fuelmegreen.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </div>
 
 <div class="play-button">

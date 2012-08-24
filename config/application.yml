@@ -43,9 +43,15 @@ regexp:
   alias: !ruby/regexp '/^[A-Za-z0-9.&]*\z/'
   name:  !ruby/regexp '/^[A-Za-z]*[\ |\-]?[A-Za-z]*$/'
   phone_stripped: !ruby/regexp '/(\d{3})(\d{3})(\d{4})/'
-  url: !ruby/regexp '/(http|https):\/\/((\w+\.){1,3}\w+\/\w+[^\s]+)/'  
+  url: !ruby/regexp '/(http|https):\/\/((\w+\.){1,3}\w+\/\w+[^\s]+)/'
+
 # Providers of oauth-based external authentication
 account_providers: [facebook]
+
+# Social links
+social:
+  twitter: FuelMeGreen
+  facebook: FuelMeGreen
 
 # Root Subdomains: Subdomains that should be routed to root url, i.e. 'www'
 root_subdomains: [www, dev]
