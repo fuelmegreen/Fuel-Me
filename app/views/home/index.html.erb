@@ -11,13 +11,8 @@
 </script>
 
 <div class="menu">
-<<<<<<< HEAD
-  <h2 class="menu-header">Sign Up For Our Waiting List</h2>
-  <%= form_for @user, as: :user, url: session_path(:user) do %>
-=======
   <h2 class="menu-header"><%= t('.sign_up.heading') %></h2>
   <%= form_for @user, as: :user, url: session_path(:user) do |f| %>
->>>>>>> Added copycopter tags
     <%= text(:email, class: 'input email', placeholder: 'email_').html_safe %>
     <button class="join-btn" type="submit"><%= t('.sign_up.button') %></button>
     <a class="facebook-btn" href="/auth/facebook"><img src="/assets/facebook-btn.png" width="145"></a>
