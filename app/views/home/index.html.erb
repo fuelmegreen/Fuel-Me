@@ -12,15 +12,33 @@
 
 <div class="menu">
   <h2 class="menu-header">Sign Up For Our Waiting List</h2>
-  <%= form_for @user, as: :user, url: session_path(:user) do |f| %>
+  <%= form_for @user, as: :user, url: session_path(:user) do %>
     <%= text(:email, class: 'input email', placeholder: 'email_').html_safe %>
     <button class="join-btn" type="submit">Join</button>
     <a class="facebook-btn" href="/auth/facebook"><img src="/assets/facebook-btn.png" width="145"></a>
   <% end %>
+  <div class="select apply">
+    <select>
+      <option>Apply for a Loan</option>
+      <option>Blue</option>
+      <option>Red</option>
+      <option>Yellow</option>
+    </select>
+  </div>
+  <div class="select investor">
+    <select>
+      <option>Investor Information</option>
+      <option>Green</option>
+      <option>Purple</option>
+      <option>Brown</option>
+    </select>
+  </div>
+
 </div>
 
 <div class="intro"><%= t('.lead_in.video_intro') %></div>
 <div class="video"></div>
+
 <div class="social">
   <div class="twitter">
     <a href="http://www.twitter.com/<%= RConfig[:social].twitter %>" target="_blank">

@@ -13,8 +13,8 @@
 #= require jquery
 #= require jquery_ujs
 #= require jquery.libs
-#
 #= require twitter/bootstrap
+#= require custom.select
 #= require string
 #= require_self
 
@@ -23,6 +23,16 @@ $ ->
   $('a[rel=popover]').popover()
   $('a[rel=tooltip]').tooltip()
   $('.tooltip').tooltip()
+  $('select').customize()
 #  $('.tablesorter').tablesorter({widgets: ['zebra']})
 #  $('a.help-link').pageslide({direction: 'left'})
 
+  $('select').each ->
+    title = $(this).attr('title')
+    val = $('option:selected', this).val()
+    title = $('option:selected', this).text() if val != ''
+    $(this).css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+    $(this).after("<span class=\"select\">#{title}</span>")
+    $(this).change ->
+      val = $('option:selected',this).text()
+      $(this).next().text(val)

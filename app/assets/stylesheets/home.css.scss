@@ -45,7 +45,7 @@ body.home.index {
 
   .video {
     position: fixed;
-    top: 250px;
+    top: 200px;
     right: 175px;
     width: 795px;
     height: 460px;
@@ -76,7 +76,7 @@ body.home.index {
 
   .intro {
     position: fixed;
-    top: 260px;
+    top: 210px;
     right: 175px;
     width: 795px;
     text-align: center;
@@ -88,7 +88,7 @@ body.home.index {
   }
   .social {
     position: fixed;
-    top: 715px;
+    top: 665px;
     right: 175px;
     width: 795px;
     .twitter, .facebook {
@@ -101,7 +101,7 @@ body.home.index {
 
   .menu {
     position: fixed;
-    top: 240px;
+    top: 190px;
     left: 75px;
     width: 321px;
     height: 352px;
@@ -151,12 +151,36 @@ body.home.index {
       float: left;
       margin: 23px 0 0 10px;
     }
+
+    .select {
+      float:left;
+      margin: 35px 0 0 42px;
+      &.investor {
+        margin-top: 20px;
+      }
+      select {
+        position: relative;
+        z-index: 10;
+        width: 231px !important;
+        height: 31px !important;
+        line-height: 31px;
+      }
+      span.custom-select {
+        width:231px;
+        height:31px;
+        line-height:31px;
+        text-indent:10px;
+        background:url(/assets/home/dropdown.png) no-repeat top left;
+        cursor:default;
+        z-index:1;
+      }
+    }
   }
 }
 
 .play-button {
   position: fixed;
-  top: 400px;
+  top: 350px;
   right: 475px;
   width: 154px;
   height: 154px;
@@ -178,9 +202,9 @@ body.home.index {
   }
 }
 
-
 .footer-wrapper {
   background: url(/assets/layout/footer-long.png) transparent top left no-repeat;
+  margin-top: 50px;
   footer {
     background: transparent;
   }
