@@ -7,7 +7,7 @@ gem 'mysql2'
 gem 'jquery-rails'
 gem 'html5-rails'
 gem 'copycopter_client', '~> 2.0.1'
-gem 'blog'
+#gem 'blog'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
