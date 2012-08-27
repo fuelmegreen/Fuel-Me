@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
+  ROLES = %w[ admin member user ] # NOTE: do not change the order
+
   class << self
     def new_with_session(params, session)
       super.tap do |user|
@@ -97,12 +99,54 @@ class User < ActiveRecord::Base
   end
   alias_method :full_name=, :name=
 
-  def notifications
-    %w[test]
+  # === Examples ===
+  #   'admin,seller'
+  #   => ['admin', 'seller']
+  def roles=(roles)
+    return unless roles
+    roles = roles.split(',').map(&:strip) unless roles.kind_of?(Array)
+    self.roles_mask = (roles & ROLES).map {|r| 2**ROLES.index(r) }.sum
   end
 
-  def messages
-    %w[test]
+  # === Examples ===
+  #   ['admin', 'seller']
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask || 0) & 2**ROLES.index(r)).zero?
+    end
+  end
+
+  # === Examples ===
+  #   'admin, seller'
+  def formatted_roles
+    self.roles.join(', ')
+  end
+
+  def formatted_phone
+    return unless phone.present?
+    "(%s) %s-%s" % [phone[0,3], phone[3,3], phone[6,4]]
+  end
+
+  def is?(role)
+    roles.include?(role.to_s)
+  end
+   
+  def ===(role)
+    is?(role)
+  end
+
+  def admin?
+    is?(:admin)
+  end
+
+  # Admins have all the rights of Members
+  def member?
+    admin? || is?(:member)
+  end
+
+  # Admins and Members have all the rights of Users
+  def user?
+    admin? || member? || is?(:user)
   end
 
   # Checks whether a password is needed or not. For validations only.

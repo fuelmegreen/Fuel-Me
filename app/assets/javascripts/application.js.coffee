@@ -35,4 +35,4 @@ $ ->
 #    $(this).after("<span class=\"select\">#{title}</span>")
 #    $(this).change ->
 #      val = $('option:selected',this).text()
-#      $(this).next().text(val)
+#      $(this).next().text(val)#= require blog
