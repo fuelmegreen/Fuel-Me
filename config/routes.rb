@@ -1,6 +1,6 @@
 FuelMe::Application.routes.draw do
 
-  #mount Blog::Engine => "/blog"
+  mount Blog::Engine => "/blog"
 
   # Devise/ActiveAdmin Authentication
   devise_for :users, ActiveAdmin::Devise.config

@@ -11,7 +11,58 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816202204) do
+ActiveRecord::Schema.define(:version => 20120825111958) do
+
+  create_table "accounts", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider",   :limit => 64, :null => false
+    t.string   "uid",                      :null => false
+    t.string   "username",   :limit => 64
+    t.string   "avatar"
+    t.string   "email"
+    t.string   "token"
+    t.string   "secret"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  add_index "accounts", ["email"], :name => "index_accounts_on_email"
+  add_index "accounts", ["provider"], :name => "index_accounts_on_provider"
+  add_index "accounts", ["uid"], :name => "index_accounts_on_uid"
+  add_index "accounts", ["user_id"], :name => "index_accounts_on_user_id"
+  add_index "accounts", ["username"], :name => "index_accounts_on_username"
+
+  create_table "blog_comments", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "url"
+    t.string   "ip"
+    t.string   "user_agent"
+    t.boolean  "can_post"
+    t.string   "referrer"
+    t.string   "state"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "blog_comments", ["email"], :name => "index_comments_on_email"
+  add_index "blog_comments", ["post_id"], :name => "index_comments_on_post_id"
+
+  create_table "blog_posts", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "title"
+    t.string   "state"
+    t.datetime "published_at"
+    t.string   "permalink"
+    t.text     "body"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "blog_posts", ["author_id"], :name => "index_posts_on_author_id"
+  add_index "blog_posts", ["permalink"], :name => "index_posts_on_permalink"
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
