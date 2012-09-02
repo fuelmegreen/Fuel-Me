@@ -5,9 +5,9 @@
 %>
 
 <div class="content">
-  <h1><%= t('policy.heading') %>FuelMe Privacy Policy</h1>
+  <h1><%= t('policy.heading', default: "FuelMe Privacy Policy") %></h1>
   <br />
-  <h2><%= t('general.heading') %>General Information</h2>
+  <h2><%= t('general.heading', default: "General Information") %></h2>
   <p><%= t('info.list.disclaimer') %>
   We collect the e-mail addresses of those who communicate with us via e-mail, aggregate information on what pages consumers access or visit, and information volunteered by the consumer (such as survey information and/or site registrations). The information we collect is used to improve the content of our Web pages and the quality of our service, and is not shared with or sold to other organizations for commercial purposes, except to provide products or services you've requested, when we have your permission, or under the following circumstances:
     <ul>
@@ -20,7 +20,7 @@
     </ul>
     </p>
 
-    <h2><%= t('info.heading') %>Information Gathering and Usage</h2>
+    <h2><%= t('info.heading', default: "Information Gathering and Usage") %></h2>
     <p>
         <ul>
           <li><%= t('info.list.item3') %>
