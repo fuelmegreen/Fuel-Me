@@ -7,7 +7,6 @@ gem 'mysql2'
 gem 'jquery-rails'
 gem 'html5-rails'
 gem 'copycopter_client', '~> 2.0.1'
-#gem 'blog'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -27,12 +26,10 @@ group :utils do
   gem 'activeadmin'         # Admin Rails Engine
   gem 'meta_search'         # OO Searching/Search Forms
   gem 'tld'                 # Top Level Domains
-  #gem 'will_paginate'       # Pagination utility
-  gem 'kaminari'
+  gem 'kaminari'            # Pagination utility
   gem 'iso_country_codes'   # Country Code lookup
   gem 'addressable'         # Ruby URI update
   gem 'delayed_job_active_record' # Background Jobs
-  gem 'rakismet'            # Anti-spam tool for blog engine
 end
 
 group :security do

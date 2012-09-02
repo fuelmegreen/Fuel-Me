@@ -32,38 +32,6 @@ ActiveRecord::Schema.define(:version => 20120825111958) do
   add_index "accounts", ["user_id"], :name => "index_accounts_on_user_id"
   add_index "accounts", ["username"], :name => "index_accounts_on_username"
 
-  create_table "blog_comments", :force => true do |t|
-    t.integer  "post_id"
-    t.string   "name"
-    t.string   "email"
-    t.string   "url"
-    t.string   "ip"
-    t.string   "user_agent"
-    t.boolean  "can_post"
-    t.string   "referrer"
-    t.string   "state"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "blog_comments", ["email"], :name => "index_comments_on_email"
-  add_index "blog_comments", ["post_id"], :name => "index_comments_on_post_id"
-
-  create_table "blog_posts", :force => true do |t|
-    t.integer  "author_id"
-    t.string   "title"
-    t.string   "state"
-    t.datetime "published_at"
-    t.string   "permalink"
-    t.text     "body"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  add_index "blog_posts", ["author_id"], :name => "index_posts_on_author_id"
-  add_index "blog_posts", ["permalink"], :name => "index_posts_on_permalink"
-
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
     t.integer  "attempts",   :default => 0
