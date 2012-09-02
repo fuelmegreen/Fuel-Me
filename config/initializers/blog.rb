@@ -2,7 +2,7 @@
 
 # The name of the website or blog. Usually used in the title
 # or headings on the blog.
-Rails.application.config.blog.name = "FuelMeGreen"
+#Rails.application.config.blog.name = "FuelMeGreen"
 
 # Retrieve the current user.  This is currently used together with
 # blog_admin_method to determine whether the user is an administrator.
@@ -16,7 +16,7 @@ Rails.application.config.blog.name = "FuelMeGreen"
 
 # Does the current user have administrator privileges?  This will be called
 # on the values returned by current_user_method, above.
-Rails.application.config.blog.blog_admin_method = :admin?
+#Rails.application.config.blog.blog_admin_method = :admin?
 
 # Which application layout should we use to render the blog?
 #Rails.application.config.blog.layout = 'application'
