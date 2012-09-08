@@ -45,14 +45,14 @@ group :omniauth do
   gem 'omniauth-twitter'  # Twitter authentication
   gem 'omniauth-linkedin' # LinkedIn authentication
   gem 'omniauth-identity' # Custom authentication
-#  gem 'omniauth-tumblr'   # Tumblr authentication
+  gem 'omniauth-tumblr'   # Tumblr authentication
 end
 
 group :apis do
   gem 'fb_graph', require: 'fb_graph' # Facebook Graph API
   gem 'linkedin', require: 'linkedin' # LinkedIn API
   gem 'twitter',  require: 'twitter'  # Twitter API
-#  gem 'tumblr',   require: 'tumblr'   # Tumblr API
+  gem 'tumblr',   require: 'tumblr'   # Tumblr API
 end
 
 group :images do
