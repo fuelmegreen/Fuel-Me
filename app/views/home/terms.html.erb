@@ -5,7 +5,7 @@
 %>
 
 <div class="content">
-  <h1><%= t('.heading') %>FuelMe Terms of Service</h1>
+  <h1><%= t('.heading', default: "FuelMe Terms of Service") %></h1>
   <br />
 
   <p><%= t('.legal.text1') %>
@@ -18,7 +18,7 @@ FuelMe reserves the right to update and change the Terms of Service from time to
 Violation of any of the terms below will result in the termination of your Account. While FuelMe prohibits such conduct and Content on the Service, you understand and agree that FuelMe cannot be responsible for the Content posted on the Service and you nonetheless may be exposed to such materials. You agree to use the Service at your own risk.
   </p>
 
-  <h2><%= t('.heading2') %>A. Account Terms</h2>
+  <h2><%= t('.heading2', default: "A. Account Terms") %></h2>
   <p>
     <ul>
       <li><%= t('.list.item1') %>You must be 18 years or older to use this Service.</li>
