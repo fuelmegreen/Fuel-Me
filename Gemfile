@@ -52,7 +52,7 @@ group :apis do
   gem 'fb_graph', require: 'fb_graph' # Facebook Graph API
   gem 'linkedin', require: 'linkedin' # LinkedIn API
   gem 'twitter',  require: 'twitter'  # Twitter API
-  gem 'tumblr',   require: 'tumblr'   # Tumblr API
+  #gem 'tumblr',   require: 'tumblr'   # Tumblr API
 end
 
 group :images do
