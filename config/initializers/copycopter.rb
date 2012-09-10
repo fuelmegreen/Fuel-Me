@@ -1,4 +1,4 @@
 CopycopterClient.configure do |config|
-  config.api_key = 'a823690ddd82c2f9f95b6275b29861d9efdd76b7d2fa76c3'
-  config.host = 'cms-fuelme.herokuapp.com'
+  config.api_key = 'c693bfa3678913e02b3004eac7bd055d79232673b4f00914'
+  config.host    = 'cms-fuelme.herokuapp.com'
 end
