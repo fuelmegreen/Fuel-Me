@@ -1,5 +1,7 @@
 FuelMe::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   # Devise/ActiveAdmin Authentication
   devise_for :users, ActiveAdmin::Devise.config
 
