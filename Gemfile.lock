@@ -399,6 +399,7 @@ DEPENDENCIES
   simple_form
   simplecov
   spork
+  therubyracer
   timecop
   tld
   twitter
