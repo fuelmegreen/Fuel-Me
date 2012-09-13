@@ -4,4 +4,25 @@
     <p class="page-desc">
     </p>
    </div>
-</div>
+ </div>
+    <div class="modal-header">
+      <h3>We want to here from You...</h3>
+    </div>
+    <%= form_for(User.new, url: registration_path(:user), id: 'register') do |f| %>
+      <div class="modal-body investors form" style="overflow: hidden;">
+        <br>
+        <div class="reg-col" style="float: left; overflow: hidden;">
+          <fieldset class="form-horizontal">
+            <%= text(:name, form: f, label: 'Full Name', tabindex: 1).html_safe %>
+            <%= text(:email,      form: f, label: 'E-mail',     tabindex: 2).html_safe %>
+            <%= textarea(:comment,  form: f, label: '', tabindex: 3, class: 'question').html_safe %>
+          </fieldset>
+        </div>
+      </div>
+        <div class="modal-footer" style="text-align: center;">
+          <fieldset>
+            <%= f.submit "Send Comment", id: 'signup-button', class: 'btn btn-primary' %>
+          </fieldset>
+        </div>
+    <% end %>
+ 

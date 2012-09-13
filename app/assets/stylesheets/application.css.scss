@@ -100,15 +100,11 @@ h1 {
   margin-bottom: 15px;
 }
 
-.howitworks{
   .video{
-      position: fixed;
-      top: 150px;
-      left: 75px;
-      width: 795px;
-      height: 460px;
+    margin: 0 200px;
+      width: 450px;
+      height: 300px;
   }
-}
 
 p.page-desc {
   font-size: 15px;
@@ -127,8 +123,23 @@ p.mission {
   width: 100%;
   height: 100px;
   text-align: center;
-
 }
+
+.contact-links {
+  text-align:center;
+  position: relative;
+  left: 300px;
+  bottom: 75px;
+  width: 200px;
+  span {
+    width: 52px;
+    height: 52px;
+    float: left;
+    &.twitter {margin: 0 10px 0 -5px;}
+    a { text-decoration: none;}
+ }
+}
+
 span.section-title {
   display: block;
   margin: 5px 0 10px 0;
@@ -140,6 +151,12 @@ span.section-title {
 
 span.section-image {
   display: block;
+}
+
+span.section-header,
+span.section-body {
+  display: block;
+  text-align:center;
 }
 
 .span3.about {
@@ -163,6 +180,18 @@ span.section-image {
 .span3.span3-5 {
   width: 225px;
   margin-left: 35px;
+}
+
+.water-diagram {
+  background: url(/assets/water-way-to-go.png) transparent top left no-repeat;
+  width: 602;
+  height: 685;
+  margin: 0 auto;
+}
+
+textarea.question {
+  width: 450px;
+  height: 50px;
 }
 
 .footer-wrapper {
@@ -191,12 +220,11 @@ span.section-image {
       }
       .copyright {
       }
- 
     }
 
     .vertical-line {
       float: left;
-      margin-left: 280px;
+      margin-left: 279px;
       right: 200px;
       width: 10px;
       height: 173px;

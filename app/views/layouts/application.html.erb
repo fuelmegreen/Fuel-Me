@@ -17,6 +17,28 @@
   <div class="container main">
     <%= render 'layouts/breadcrumbs' %>
     <%= yield %>
+    <div class="row">
+      <div class="span10">
+        <p class="mission">Our mission is to Accelerating the Electric &amp; Hybrid movement</p>
+        <div class="contact-links">
+          <span class="facebook">
+            <a href="http://www.facebook.com/<%= RConfig[:social].facebook %>" target="_blank">
+              <img src="/assets/facebook-grey.png">
+            </a>
+          </span>
+          <span class="twitter">
+            <a href="http://www.twitter.com/<%= RConfig[:social].twitter %>" target="_blank">
+              <img src="/assets/twitter-grey.png">
+            </a>
+          </span>
+          <span class="email">
+            <a href="mailto:<%= RConfig[:email].contact %>">
+              <img src="/assets/email-grey.png">
+            </a>
+          </span>
+        </div>
+       </div>
+    </div>
   </div>
   <%= render 'layouts/footer' %>
 </body>

@@ -4,6 +4,10 @@ module FormHelper
     form_field :text_field, field, attrs
   end
 
+  def textarea field, attrs={}
+    form_field :text_area, field, attrs
+  end
+
   def password field, attrs={}
     form_field :password_field, field, attrs
   end
@@ -43,8 +47,8 @@ module FormHelper
   private
 
   def form_field type, field, attrs={}
-    attrs = Hashie::Mash.new({class: 'input-xlarge'}.merge(attrs))
-    attrs.placeholder = field.to_s.humanize unless attrs.placeholder?
+
+    attrs = Hashie::Mash.new({class: ''}.merge(attrs))
     form = attrs.delete(:form)
 
     if attrs.popover?
@@ -53,13 +57,15 @@ module FormHelper
       attrs.merge!('rel' => 'popover', 'data-original-title' => title, 'data-content' => popover.content)
     end
 
-    field   = form ? form.send(type, field, attrs) : send(:"#{type}_tag", field, nil, attrs) unless attrs.no_field?
-    control = div(field, class: 'controls')
-
     lbl = ''
     if attrs.label?
-      lbl = label(:user, field, attrs.label.html_safe, class: attrs.klass || 'left-side').html_safe
+      lbl_content = attrs.delete(:label).html_safe
+      klass = attrs.delete(:klass)
+      lbl = label(:user, field, lbl_content, class: klass || 'control-label').html_safe
     end
+
+    field   = form ? form.send(type, field, attrs) : send(:"#{type}_tag", field, nil, attrs) unless attrs.no_field?
+    control = div(field, class: 'controls')
 
     lbl << div(control, class: 'control-group')
   end

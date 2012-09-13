@@ -3,5 +3,63 @@
     <h1><%= t('.heading', default: "Fuel Savings Loan Calculator") %></h1>
     <p class="page-desc">
     </p>
+    <form action="" method="post" name="calculator">
+                              <table id="savings-table">
+                              	<caption class="table-title">Calculate Fuel Costs &amp; Compare Savings</caption>
+                                <tbody>
+                                  <tr> 
+                                  <td colspan="2"></td>
+                                  <td width="20%" class="column-header">Your Car</td>
+                                  <td width="20%" class="column-header">New Car<br>(optional)</td>
+                                </tr>
+                                <tr> 
+                                  <td colspan="2">Fuel price ($/gallon)</td>
+                                  <td class="carinput">
+                                    <input type="text" onchange="clearTotals()" maxlength="4" size="5" value="3.72" id="price1" name="price1">                            
+                                  </td>
+                                  <td class="carinput">
+                                    <input type="text" onchange="clearTotals()" maxlength="4" size="5" value="3.72" id="price2" name="price2"> 
+                                  </td>
+                                </tr>
+                                <tr id="combMpgRow"> 
+                                  <td width="50%" colspan="2">My average MPG is...</td>
+                                  <td class="carinput"> <input type="text" onchange="clearTotals()" maxlength="5" size="5" id="MPG1" name="MPG1"></td>
+                                  <td class="carinput"> <input type="text" onchange="clearTotals()" maxlength="5" size="5" id="MPG2" name="MPG2"></td>
+                                </tr>
+                               <tr> 
+                                  <td colspan="2">I drive approximately...</td>
+                                  <td width="50%" colspan="2">
+                                    <input type="text" onchange="clearTotals()" maxlength="6" size="8" value="15000" id="annmiles1" name="annmiles1"> 
+                                    &nbsp;miles each year.</td>
+                                </tr>
+                                <tr> 
+                                  <td width="50%" colspan="2">I plan to own my car...</td>
+                                  <td width="50%" colspan="2"> 
+                                      <input type="text" onchange="clearTotals()" maxlength="2" size="2" value="5" id="years1" name="years1">
+                                      &nbsp;years.</td>
+                                </tr>
+                                <tr> 
+                                  <td class="button-row" colspan="4" style="text-align:center;"> 
+                                      <input type="button" name="detail" id="detail" value="Calculate" onclick="calculateMpg()" class="btn btn-success">
+                                      <input type="reset" name="reset" value="Reset" class="btn btn-inverse">
+                                    </td>
+                                </tr>
+                                <tr> 
+                                  <td class="result-row-header" colspan="2">Annual Fuel Cost</td>
+                                  <td><input type="text" style="border:0; text-align: right" maxlength="7" size="9" id="anncost1" name="anncost1"></td>
+                                  <td><input type="text" style="border:0; text-align: right" maxlength="7" size="9" id="anncost2" name="anncost2"></td>
+                                </tr>
+                                <tr style="display: none;" id="annDiffRow"> 
+                                <td class="summary" colspan="4"> <input type="text" style="border:0; text-align: center; color: green; font-weight: bold" maxlength="60" size="60" name="anncostdiff"></td></tr>
+                                <tr> 
+                                  <td class="result-row-header" colspan="2">Total Fuel Cost During the Time You Own Your Vehicle</td>
+                                  <td><input type="text" style="border:0; text-align: right" maxlength="9" size="9" id="lifecost1" name="lifecost1"></td>
+                                  <td><input type="text" style="border:0; text-align: right" maxlength="9" size="9" id="lifecost2" name="lifecost2"></td>
+                                </tr>
+                                <tr style="display: none;" id="lifeDiffRow"> 
+                                  <td class="summary" colspan="4"><input type="text" style="border:0; text-align: center; color: green; font-weight: bold" maxlength="60" size="60" name="lifecostdiff"></td>
+                                </tr>
+                              </tbody></table>
+                          </form>
    </div>
 </div>

@@ -5,8 +5,8 @@ test_mode: false
 
 # Default Title for HTML pages
 web:
-  title:       "FuelMe"
-  description: "FuelMe"
+  title:       "FuelMeGreen - Accelerating the Electric &amp; Hybrid movement"
+  description: "Accelerating the Electric &amp; Hybrid movement"
   keywords:    "skywyre"
   author:      "Rahmal Conda"
   robots:      "noodp,noydir"
@@ -52,6 +52,11 @@ account_providers: [facebook]
 social:
   twitter: FuelMeGreen
   facebook: FuelMeGreen
+
+# E-mails
+email:
+  contact: akil.marsh@fuelmegreen.com
+  support: no-reply@fuelmegreen.com
 
 # Root Subdomains: Subdomains that should be routed to root url, i.e. 'www'
 root_subdomains: [www, dev]

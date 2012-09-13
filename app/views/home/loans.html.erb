@@ -2,6 +2,40 @@
   <div class="span10">
     <h1><%= t('.heading', default: "Personal Loans") %></h1>
     <p class="page-desc">
+      Take one step closer towards owning your dream Electric or Hybrid vehicle with a Fuel Savings Loan. A Fuel Savings Loan allows you to receive the monetary benefits of fuel savings today rather than over many years in the form of a low interest rate loan based on your Fuel Savings. 
+      <br><br>
+Join our waiting list for a Fuel Savings Loan. Before you join the waiting list, we suggest that you use our Fuel Savings Loan Calculator to see if this loan product is suitable for you. 
     </p>
    </div>
-</div>
+ </div>
+
+<div class="row">
+  <div class="span10">
+ 
+  <div class="modal-header">
+    <h3>Sign in</h3>
+  </div>
+    <%= form_for(User.new, url: registration_path(:user), id: 'register') do |f| %>
+      <div class="modal-body investors form" style="overflow: hidden;">
+        <br>
+        <div class="reg-col" style="float: left; overflow: hidden;">
+          <fieldset class="form-horizontal">
+            <%= text(:first_name, form: f, label: 'First Name', tabindex: 1).html_safe %>
+            <%= text(:last_name,  form: f, label: 'Last Name',  tabindex: 2).html_safe %>
+            <%= text(:email,      form: f, label: 'E-mail',     tabindex: 3).html_safe %>
+            <%= text(:zip_code,   form: f, label: 'Zip-code', tabindex: 4).html_safe %>
+            <% q1 = 'When are you expecting to purchase your next vehicle?' %>
+            <%= text(:question,   form: f, label: q1, tabindex: 5).html_safe %>
+            <%= checkbox(:agree_to_terms, label: 'I have read the Fuel Me Green <a href="/terms" target="_blank">Terms of Service</a>.'.html_safe).html_safe %>
+          </fieldset>
+          <fieldset>
+            <%= f.submit "Join", id: 'join-button', class: 'btn btn-primary' %>
+          </fieldset>
+        </div>
+      </div>
+        <% end %>
+
+   </div>
+ </div>
+
+

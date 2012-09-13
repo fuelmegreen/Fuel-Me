@@ -1,10 +1,54 @@
 <div class="row">
   <div class="span10">
-    <h1><%= t('.heading', default: "How It Works") %></h1>
+    <h1>Potential Investors</h1>
     <p class="page-desc">
-      <%= t('.text') %>Are you interested in getting a financial return while helping the environment and reducing our dependence on oil?
+      Are you interested in getting a financial return while helping the environment and reducing our dependence on oil?
       Join our email list to receive updates and stay connected.<br /><br />
       Get on the waiting list to be a Fuel savings loan lender.
     </p>
    </div>
 </div>
+<div class="row">
+  <div class="span7">
+    <div class="modal-header">
+      <h3>Signup</h3>
+    </div>
+    <%= form_for(User.new, url: registration_path(:user), id: 'register') do |f| %>
+      <div class="modal-body investors form" style="overflow: hidden;">
+        <span class="login">Have an account? <a href="/login">Login</a></span>
+        <br>
+        <div class="reg-col" style="float: left; overflow: hidden;">
+          <fieldset class="form-horizontal">
+            <%= text(:first_name, form: f, label: 'First Name', tabindex: 1).html_safe %>
+            <%= text(:last_name,  form: f, label: 'Last Name',  tabindex: 2).html_safe %>
+            <%= text(:email,      form: f, label: 'E-mail',     tabindex: 3).html_safe %>
+            <%= text(:zip_code,   form: f, label: 'Zip-code', tabindex: 4).html_safe %>
+          </fieldset>
+          <fieldset>
+            <% q1 = '1. Once we launch our services, how much would you be willing lend on an annual basis?' %>
+            <% q2 = '2. What interest rate is acceptable for you to lend to a borrower trying to lower their CO2 consumption?' %>
+            <%= textarea(:question1,  form: f, label: q1, tabindex: 5, class: 'question').html_safe %>
+            <%= textarea(:question2,  form: f, label: q2, tabindex: 5, class: 'question').html_safe %>
+
+            <%= checkbox(:agree_to_terms, label: 'I have read the Fuel Me Green <a href="/terms" target="_blank">Terms of Service</a>.'.html_safe).html_safe %>
+          </fieldset>
+        </div>
+      </div>
+        <div class="modal-footer" style="text-align: center;">
+          <fieldset>
+            <%= f.submit "Create Account", id: 'signup-button', class: 'btn btn-primary' %>
+          </fieldset>
+        </div>
+    <% end %>
+  </div>
+  <div class="span5">
+    <div class="water-diagram">
+      <img src="/assets/investors/water-way-to-go.png">
+    </div>
+  </div>
+</div>
+<script>
+  $(function(){
+    $('form').addClass('');
+  });
+</script>
