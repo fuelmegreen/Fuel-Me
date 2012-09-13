@@ -17,7 +17,7 @@
           <fieldset class="form-horizontal">
             <%= text(:name,     label: 'Full Name', tabindex: 1).html_safe %>
             <%= text(:email,    label: 'E-mail',    tabindex: 2).html_safe %>
-            <%= textarea(:body, label: 'Comment',   tabindex: 3, class: 'question').html_safe %>
+            <%= textarea(:body, label: 'Comment',   tabindex: 3, style: 'width: 210px;').html_safe %>
           </fieldset>
         </div>
       </div>
@@ -29,18 +29,20 @@
     <% end %>
   </div>
 
-<div class="span1">&nbsp;</div>
+  <div class="span1">&nbsp;</div>
 
-<div class="span3">
-<section id="sidebar">
-  <h2>My Tweets</h2>
-  <article class="testimonials">
-    <% my_tweets.each do |tweet| -%>
-      <blockquote>
-        <p><%= tweet.text.tweetify.html_safe %></p>
-        <cite><%= tweet_citation(tweet) %></cite>
-      </blockquote>
-    <% end -%>
-  </article>
-</section>
+  <div class="span3">
+    <section id="sidebar">
+      <h3>Our Tweets</h3>
+      <article class="testimonials">
+        <% my_tweets.each do |tweet| -%>
+          <blockquote>
+            <p><%= tweet.text.tweetify.html_safe %></p>
+            <cite><%= tweet_citation(tweet) %></cite>
+          </blockquote>
+        <% end -%>
+      </article>
+    </section>
+  </div>
+
 </div>
