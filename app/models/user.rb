@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
       user.email      = auth.info.email
       user.username   = auth.info.username || auth.info.nickname || linkedin_username(auth)
       user.bio        = auth.info.bio || auth.info.description || auth.info.headline 
-      user.remote_avatar_url = auth.info.image if auth.info.image?
+      #user.remote_avatar_url = auth.info.image if auth.info.image?
       # if set_password
       #   user.password = 'password'
       #   user.password_confirmation = 'password'

@@ -11,9 +11,6 @@ facebook:
 twitter:
   key:    '1UrRCs1ylc5ZyDTBCPQBGg'
   secret: '5W7TE8MmupNn25Vy9wiR2xy0f9FenOw6EJ8CfxG0s'
-linkedin:
-  key:    '2vvbs5tbte0u'
-  secret: '5RRFAhqHakPYqC3E'
-tumblr:
-  key:    'truSFFS1y7hx5jYwjQOKVJVNXgYmvbSKVyP0LDkieIkrPHFnRd'
-  secret: 'DLhvq8MNmgi8RjEm0gdE8hOXMky2pAuR8IquvuTK6ivg8tj4ZT'
+#tumblr:
+#  key:    'truSFFS1y7hx5jYwjQOKVJVNXgYmvbSKVyP0LDkieIkrPHFnRd'
+#  secret: 'DLhvq8MNmgi8RjEm0gdE8hOXMky2pAuR8IquvuTK6ivg8tj4ZT'

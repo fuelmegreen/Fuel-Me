@@ -218,11 +218,6 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
-    omniauth-identity (1.1.0)
-      bcrypt-ruby (~> 3.0)
-      omniauth (~> 1.0)
-    omniauth-linkedin (0.0.8)
-      omniauth-oauth (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -392,8 +387,6 @@ DEPENDENCIES
   oauth
   omniauth
   omniauth-facebook
-  omniauth-identity
-  omniauth-linkedin
   omniauth-tumblr
   omniauth-twitter
   rails (= 3.2.6)

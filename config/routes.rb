@@ -1,7 +1,5 @@
 FuelMe::Application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-
   # Devise/ActiveAdmin Authentication
   devise_for :users, ActiveAdmin::Devise.config
 
@@ -26,6 +24,7 @@ FuelMe::Application.routes.draw do
   resources :photos
 
   # Public pages
+  match 'send_comment' => 'home#send_comment', as: :send_comment
   match 'how_it_works' => 'home#how_it_works', as: :how_it_works
   match 'loans'        => 'home#loans',        as: :loans
   match 'investors'    => 'home#investors',    as: :investors

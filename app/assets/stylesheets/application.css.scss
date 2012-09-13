@@ -100,11 +100,11 @@ h1 {
   margin-bottom: 15px;
 }
 
-  .video{
-    margin: 0 200px;
-      width: 450px;
-      height: 300px;
-  }
+.how-it-works.video{
+  margin: 0 200px;
+  width: 450px;
+  height: 300px;
+}
 
 p.page-desc {
   font-size: 15px;
@@ -247,3 +247,24 @@ textarea.question {
     }
  }
 }
+
+a.tweet {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-decoration: none;
+  &:link, &:visited, &:hover { text-decoration: none; }
+
+  .reply, .retweet, .favorite {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(/assets/twitter_sprite.png);
+    background-color: #0084B4;
+  }
+  .reply    { background-position:   0px -190px; }
+  .retweet  { background-position: -20px -190px; }
+  .favorite { background-position: -40px -190px; }
+}
+
+

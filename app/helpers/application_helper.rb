@@ -156,4 +156,29 @@ module ApplicationHelper
     '&nbsp;&#124;&nbsp;'.html_safe
   end
 
+  def tweet_link type, tweet_id
+    link_to tweet_icon(type), tweet_url(type, tweet_id), class: 'tweet', title: type.to_s, target: '_blank'
+  end
+
+  def tweet_icon icon_class
+    "<i class=\"#{icon_class}\">&nbsp;&nbsp;&nbsp;</i>".html_safe
+  end
+
+  def tweet_url type, tweet_id
+    url = 'https://twitter.com/intent/'
+    url << (type == :reply ? "tweet?in_reply_to=" : "#{type}?tweet_id=")
+    url << tweet_id.to_s
+    url.html_safe
+  end
+
+  def tweet_citation tweet
+    cite = time_in_words(tweet.created_at)
+    cite << bar_spacer   << tweet_link(:retweet,  tweet.id)
+    cite << blank_spacer << tweet_link(:reply,    tweet.id)
+    cite << blank_spacer << tweet_link(:favorite, tweet.id)
+    cite.html_safe
+  end
+
+
+
 end # module 

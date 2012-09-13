@@ -15,6 +15,7 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'compass-rails'
   gem 'compass-h5bp'
+  gem 'therubyracer'
 end
 
 group :utils do
@@ -43,8 +44,6 @@ group :omniauth do
   gem 'omniauth'          # Multi-provider Authentication Services
   gem 'omniauth-facebook' # Facebook authentication
   gem 'omniauth-twitter'  # Twitter authentication
-  gem 'omniauth-linkedin' # LinkedIn authentication
-  gem 'omniauth-identity' # Custom authentication
   gem 'omniauth-tumblr'   # Tumblr authentication
 end
 

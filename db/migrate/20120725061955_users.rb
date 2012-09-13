@@ -4,7 +4,7 @@ class Users < ActiveRecord::Migration
       t.string :first_name, limit: 64, null: false
       t.string :last_name,  limit: 64
       t.string :avatar
-      t.string :bio
+      t.string :zip_code
       t.text :preferences
       
       ## Database authenticatable

@@ -5,24 +5,42 @@
     </p>
    </div>
  </div>
+<div class="row">
+  <div class="span6">
     <div class="modal-header">
       <h3>We want to here from You...</h3>
     </div>
-    <%= form_for(User.new, url: registration_path(:user), id: 'register') do |f| %>
+    <%= form_tag(url: '/send_comment') do %>
       <div class="modal-body investors form" style="overflow: hidden;">
         <br>
         <div class="reg-col" style="float: left; overflow: hidden;">
           <fieldset class="form-horizontal">
-            <%= text(:name, form: f, label: 'Full Name', tabindex: 1).html_safe %>
-            <%= text(:email,      form: f, label: 'E-mail',     tabindex: 2).html_safe %>
-            <%= textarea(:comment,  form: f, label: '', tabindex: 3, class: 'question').html_safe %>
+            <%= text(:name,     label: 'Full Name', tabindex: 1).html_safe %>
+            <%= text(:email,    label: 'E-mail',    tabindex: 2).html_safe %>
+            <%= textarea(:body, label: 'Comment',   tabindex: 3, class: 'question').html_safe %>
           </fieldset>
         </div>
       </div>
         <div class="modal-footer" style="text-align: center;">
           <fieldset>
-            <%= f.submit "Send Comment", id: 'signup-button', class: 'btn btn-primary' %>
+            <%= submit_tag "Send Comment", id: 'signup-button', class: 'btn btn-primary' %>
           </fieldset>
         </div>
     <% end %>
- 
+  </div>
+
+<div class="span1">&nbsp;</div>
+
+<div class="span3">
+<section id="sidebar">
+  <h2>My Tweets</h2>
+  <article class="testimonials">
+    <% my_tweets.each do |tweet| -%>
+      <blockquote>
+        <p><%= tweet.text.tweetify.html_safe %></p>
+        <cite><%= tweet_citation(tweet) %></cite>
+      </blockquote>
+    <% end -%>
+  </article>
+</section>
+</div>

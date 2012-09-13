@@ -8,5 +8,5 @@ cache_options:
   Cache-Control: max-age=315576000
 
 root_dir:  tmp
-s3_bucket: skywyre
+s3_bucket: fuelme
 cache_dir: uploads
